@@ -6,50 +6,94 @@ import wellcomeBg from '../Data/welcome-bg.svg';
 export default function Ecommerce() {
   return (
     <div className='mt-12'>
-  <div className='flex flex-wrap lg:flex-nowrap justify-center'>
-    {/* کارت اصلی با SVG full width */}
-    <div
-      className='bg-white h-44 w-full rounded-xl p-8 pt-9 m-3 bg-no-repeat bg-cover bg-center'
-      style={{ backgroundImage: `url(${wellcomeBg})` }}
-    >
-      <div className='flex justify-between items-center'>
-        <div>
-          <p className='font-bold'>Earnings</p>
-          <p className='text-2xl'>$63,445.16</p>
-        </div>
-      </div>
-      <div className='mt-6'>
-        <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md"/>
-      </div>
-    </div>
-
-    {/* کارت‌های earningData بدون background خاکستری */}
-    <div className='flex m-3 gap-2 justify-between flex-wrap lg:flex-nowrap w-full'>
-      {earningData?.map((item) => (
+      <div className='flex flex-wrap lg:flex-nowrap justify-center'>
+        {/* کارت اصلی با SVG full width */}
         <div
-          key={item.title}
-          className='flex-1 min-w-[14rem] p-4 pt-9 rounded-2xl flex items-start'
+          className='bg-white h-44 w-full rounded-xl p-8 pt-9 m-3 bg-no-repeat bg-cover bg-center'
+          style={{ backgroundImage: `url(${wellcomeBg})` }}
         >
-          <button
-            type='button'
-            style={{ color: item.iconColor, backgroundColor: item.iconBg }}
-            className='text-4xl opacity-90 rounded-full p-5 hover:drop-shadow-xl cursor-pointer'
-          >
-            {item.icon}
-          </button>
-          <div className='ml-4'>
-            <p className='mt-1'>
-              <span className='text-lg font-semibold'>{item.amount}</span>
-              <span className={`text-sm text-${item.pcColor} ml-2`}>{item.percentage}</span>
-            </p>
-            <p className='text-sm text-gray-400 mt-1'>{item.title}</p>
+          <div className='flex justify-between items-center'>
+            <div>
+              <p className='font-bold'>Earnings</p>
+              <p className='text-2xl'>$63,445.16</p>
+            </div>
+          </div>
+          <div className='mt-6'>
+            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
           </div>
         </div>
-      ))}
+
+        {/* کارت‌های earningData بدون background خاکستری */}
+        <div className='flex m-3  justify-between flex-wrap lg:flex-nowrap w-full'>
+          {earningData?.map((item) => (
+            <div
+              key={item.title}
+              className='flex-1 min-w-[14rem] p-4 pt-9 rounded-2xl flex items-start'
+            >
+              <button
+                type='button'
+                style={{ color: item.iconColor, backgroundColor: item.iconBg }}
+                className='text-4xl opacity-0.9 rounded-full p-5 hover:drop-shadow-xl cursor-pointer'
+              >
+                {item.icon}
+              </button>
+              <div className='ml-4'>
+                <p className='mt-1'>
+                  <span className='text-lg font-semibold'>{item.amount}</span>
+                  <span className={`text-sm text-${item.pcColor} ml-2`}>{item.percentage}</span>
+                </p>
+                <p className='text-sm text-gray-400 mt-1'>{item.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='flex gap-10 flex-wrap justify-center'>
+        <div className='bg-gray-200 m-3 p-4 rounded-2xl md:w-[65%]'>
+          <div className='flex justify-between'>
+            <p className='font-semibold text-xl'>
+              Revenue Updates
+            </p>
+            <div className='flex item-center gap-4'>
+              <p className='flex items-center gap-4 text-gray-800 hover:drop-shadow-xl'>
+                <span className=''>0</span>
+                <span>Expense</span>
+              </p>
+              <p className='flex items-center gap-4 text-green-400 hover:drop-shadow-xl'>
+                <span className=''>0</span>
+                <span>Budget</span>
+              </p>
+            </div>
+          </div>
+          <div className='mt-10 flex gap-2 flex-wrap justify-center'>
+            <div className='border-r border-gray-400 m-4 pr-10 '>
+              <div>
+                <p>
+                  <span className='text-3xl font-semibold'>$93,876</span>
+                  <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span>
+                </p>
+                <p className='text-gray-500 mt-1'>Budget</p>
+              </div>
+              <div className='mt-8'>
+                <p>
+                  <span className='text-3xl font-semibold'>$50,512</span>
+                  {/* <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span> */}
+                </p>
+                <p className='text-gray-500 mt-1'>Expense</p>
+              </div>
+              <div className='mt-5'>
+                <SparkLine/>
+              </div>
+              <div className='mt-10'>
+                <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px"/>
+              </div>
+            </div>
+            <div>
+              <Stacked />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
   )
 }
