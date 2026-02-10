@@ -5,21 +5,21 @@ import { StateContext } from '../Contexts/ContextProvider'
 import wellcomeBg from '../Data/welcome-bg.svg';
 export default function Ecommerce() {
   return (
-    <div className='mt-12'>
+    <div className='mt-10'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
         {/* کارت اصلی با SVG full width */}
         <div
-          className='bg-white h-44 w-full rounded-xl p-8 pt-9 m-3 bg-no-repeat bg-cover bg-center'
+          className='bg-white h-44 w-full rounded-xl p-8 pt-5 m-3 bg-no-repeat bg-cover bg-center'
           style={{ backgroundImage: `url(${wellcomeBg})` }}
         >
-          <div className='flex justify-between items-center'>
-            <div>
-              <p className='font-bold'>Earnings</p>
+          <div className='flex justify-between items-center relative'>
+            <div className='absolute left-0'>
+              <p className='font-bold'>کسب درآمد</p>
               <p className='text-2xl'>$63,445.16</p>
             </div>
           </div>
-          <div className='mt-6'>
-            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
+          <div className='mt-10 mr-[40%]'>
+            <Button color="white" bgColor="blue" text="دانلود" borderRadius="10px" size="md" />
           </div>
         </div>
 
@@ -49,46 +49,46 @@ export default function Ecommerce() {
         </div>
       </div>
       <div className='flex gap-10 flex-wrap justify-center'>
-        <div className='bg-gray-200 m-3 p-4 rounded-2xl md:w-[65%]'>
+        <div className='bg-gray-200 m-3 p-4 rounded-2xl md:w-[75%]'>
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>
-              Revenue Updates
+              به روزرسانی درآمد
             </p>
             <div className='flex item-center gap-4'>
               <p className='flex items-center gap-4 text-gray-800 hover:drop-shadow-xl'>
                 <span className=''>0</span>
-                <span>Expense</span>
+                <span>هزینه ها</span>
               </p>
-              <p className='flex items-center gap-4 text-green-400 hover:drop-shadow-xl'>
+              <p className='flex items-center gap-4 text-red-500 hover:drop-shadow-xl'>
                 <span className=''>0</span>
-                <span>Budget</span>
+                <span>بودجه</span>
               </p>
             </div>
           </div>
           <div className='mt-10 flex gap-2 flex-wrap justify-center'>
-            <div className='border-r border-gray-400 m-4 pr-10 '>
+            <div className='border-l border-gray-400 m-4 pl-16'>
               <div>
                 <p>
                   <span className='text-3xl font-semibold'>$93,876</span>
                   <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span>
                 </p>
-                <p className='text-gray-500 mt-1'>Budget</p>
+                <p className='text-gray-500 mt-1'>بودجه</p>
               </div>
               <div className='mt-8'>
                 <p>
                   <span className='text-3xl font-semibold'>$50,512</span>
                   {/* <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span> */}
                 </p>
-                <p className='text-gray-500 mt-1'>Expense</p>
+                <p className='text-gray-500 mt-1'>هزینه ها</p>
               </div>
               <div className='mt-5'>
                 <SparkLine/>
               </div>
               <div className='mt-10'>
-                <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px"/>
+                <Button color="white" bgColor="blue" text="دانلود گزارش" borderRadius="10px"/>
               </div>
             </div>
-            <div>
+            <div className='ml-2'>
               <Stacked />
             </div>
           </div>

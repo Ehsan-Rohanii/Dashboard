@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/x-data-grid": "^8.27.0",
     "@syncfusion/ej2": "^32.2.3",
     "@syncfusion/ej2-react-charts": "^32.2.3",
     "@syncfusion/ej2-react-popups": "^32.2.3",

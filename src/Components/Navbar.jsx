@@ -93,8 +93,8 @@ export default function Navbar() {
           onClick={() => handleClick('userProfile')}
         >
           <img src={avatar} alt="avatar" className="rounded-full w-8 h-8" />
-          <span>Hi, </span>
-          <span className="text-gray-400 font-bold ml-1 text-14">Michael</span>
+          <span></span>
+          <span className="text-gray-400 font-bold ml-1 text-14">Ehsan</span>
           <MdKeyboardArrowDown className="text-gray-400 font-bold ml-1 text-14" />
         </div>
 
