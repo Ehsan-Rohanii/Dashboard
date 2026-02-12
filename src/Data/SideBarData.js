@@ -1,5 +1,6 @@
 import { MdShoppingCart, MdPeople, MdStorefront } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
 
 export const sidebarData = [
   {
@@ -29,7 +30,12 @@ export const sidebarData = [
         name: "مشتریان",
         path: "/customers",
         icon: FaUsers
-      }
+      },
+      {
+        name: "تقویم",
+        path: "/calendar",
+        icon: FaCalendarAlt
+      },
     ]
   }
 ];

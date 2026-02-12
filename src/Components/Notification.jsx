@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Notification() {
   return (
-    <div>
-      NOtif
+    <div className='text-2xl'>
+      Notifications
     </div>
   )
 }
