@@ -11,6 +11,6 @@ export const ordersData = [
     product: "هدفون بلوتوث",
     customer: "سارا احمدی",
     price: 900000,
-    status: "در انتظار",
+    status: "در انتظار پرداخت",
   },
 ];
