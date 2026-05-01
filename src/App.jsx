@@ -39,14 +39,14 @@ export default function App() {
           <Tooltip id="settings" />
         </div>
 
-        {/* 📌 Sidebar (Right) */}
+        {/*  Sidebar (Right) */}
         {activeMenu && (
           <div className="w-72 fixed right-0 top-0 h-screen bg-white dark:bg-gray-200 z-50">
             <Sidebar />
           </div>
         )}
 
-        {/* 📄 Main Content */}
+        {/*  Main Content */}
         <div
           className={`w-full min-h-screen ${
             activeMenu ? "md:mr-72" : ""

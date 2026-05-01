@@ -7,7 +7,6 @@ export default function Ecommerce() {
   return (
     <div className='mt-10'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
-        {/* کارت اصلی با SVG full width */}
         <div
           className='bg-white h-44 w-full rounded-xl p-8 pt-5 m-3 bg-no-repeat bg-cover bg-center'
           style={{ backgroundImage: `url(${wellcomeBg})` }}
@@ -15,7 +14,7 @@ export default function Ecommerce() {
           <div className='flex justify-between items-center relative'>
             <div className='absolute left-0'>
               <p className='font-bold'>کسب درآمد</p>
-              <p className='text-2xl'>$63,445.16</p>
+              <p className='text-2xl'>76,000,000 تومان</p>
             </div>
           </div>
           <div className='mt-10 mr-[40%]'>
@@ -23,7 +22,6 @@ export default function Ecommerce() {
           </div>
         </div>
 
-        {/* کارت‌های earningData بدون background خاکستری */}
         <div className='flex m-3  justify-between flex-wrap lg:flex-nowrap w-full'>
           {earningData?.map((item) => (
             <div
@@ -69,14 +67,14 @@ export default function Ecommerce() {
             <div className='border-l border-gray-400 m-4 pl-16'>
               <div>
                 <p>
-                  <span className='text-3xl font-semibold'>$93,876</span>
+                  <span className='text-3xl font-semibold'>46,000,000 تومان</span>
                   <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span>
                 </p>
                 <p className='text-gray-500 mt-1'>بودجه</p>
               </div>
               <div className='mt-8'>
                 <p>
-                  <span className='text-3xl font-semibold'>$50,512</span>
+                  <span className='text-3xl font-semibold'>1,800,000 تومان</span>
                   {/* <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span> */}
                 </p>
                 <p className='text-gray-500 mt-1'>هزینه ها</p>
